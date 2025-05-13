@@ -77,7 +77,7 @@ O plugin oferece configurações extensivas em `config.yml`:
 
 ## Requisitos
 
-- Servidor Bukkit/Spigot/Paper 1.13+
+- Servidor Spigot 1.20.6
 - Vault (para funcionalidades econômicas)
 - Plugin de economia compatível com Vault (como EssentialsX)
 - GriefPrevention (opcional, para integração com sistema de claims)
