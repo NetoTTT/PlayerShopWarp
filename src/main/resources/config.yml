@@ -1,0 +1,108 @@
+# PlayerShopWarp - Configuração
+# Desenvolvido por: SeuNome
+
+# Configurações gerais
+settings:
+  # Número máximo de warps por jogador (padrão sem permissões especiais)
+  max-default-warps: 1
+  
+  # Custo para criar uma warp (requer Vault)
+  warp-creation-cost: 1000.0
+  
+  # Custo para teleportar para uma warp (requer Vault)
+  # 0 para desativar
+  warp-teleport-cost: 0.0
+  
+  # Cooldown entre anúncios (em segundos)
+  announcement-cooldown: 300
+  
+  # Idioma do plugin (arquivos na pasta lang/)
+  # Idiomas disponíveis: pt_BR, en
+  # Para adicionar novos idiomas, crie um arquivo com o nome do idioma na pasta lang/
+  language: "pt_BR"
+
+# Configurações do sistema Anti-Trap
+anti-trap:
+  # Ativar sistema anti-trap
+  enabled: true
+  
+  # Verificar se há blocos sólidos abaixo (evita quedas)
+  check-solid-ground: true
+  
+  # Distância para verificar blocos abaixo (máximo)
+  ground-check-distance: 5
+  
+  # Verificar se há blocos perigosos próximos (lava, TNT, etc)
+  check-dangerous-blocks: true
+  
+  # Raio para verificar blocos perigosos
+  dangerous-blocks-radius: 2
+  
+  # Lista de blocos considerados perigosos
+  dangerous-blocks:
+    - LAVA
+    - TNT
+    - FIRE
+    - MAGMA_BLOCK
+    - CACTUS
+    - WITHER_ROSE
+    - CAMPFIRE
+    - SOUL_CAMPFIRE
+  
+  # Verificar se o local está dentro de uma claim do GriefPrevention
+  check-grief-prevention: true
+  
+  # Se verdadeiro, só permite teleportar para warps em claims do dono da warp
+  only-owner-claims: true
+
+# Configurações do scanner de área
+scanner:
+  # Raio de escaneamento em blocos (resultará em uma área quadrada de 2*raio x 2*raio)
+  radius: 8
+
+# Configurações da interface gráfica
+gui:
+  # Título da GUI principal
+  title: "&8Lojas dos Jogadores"
+  
+  # Número de linhas na GUI (1-6)
+  rows: 6
+  
+  # Formato do nome do item na GUI
+  item-name-format: "&e{shop_name}"
+  
+  # Descrição do item na GUI
+  item-lore:
+    - "&7Dono: &f{owner}"
+    - "&7Descrição: &f{description}"
+    - ""
+    - "&aClique para teleportar!"
+
+claimblocks:
+  enabled: true
+  # Comandos que o JOGADOR executará (ele precisa da permissão para eles)
+  buy_command: "buyclaimblocks {amount}"
+  sell_command: "sellclaimblocks {amount}"
+
+  custom_buy_price_per_block: 10.0
+  custom_sell_price_per_block: 5.0 # Geralmente menor que o de compra
+
+  options:
+    buy100:
+      name: "&aComprar 100 Blocos"
+      item: "STONE"
+      amount: 100
+      price: 1000.0
+      type: "buy" # 'buy' ou 'sell'
+    buy500:
+      name: "&aComprar 500 Blocos"
+      item: "IRON_BLOCK"
+      amount: 500
+      price: 4500.0
+      type: "buy"
+    sell100:
+      name: "&cVender 100 Blocos"
+      item: "REDSTONE_BLOCK"
+      amount: 100
+      price: 400.0 # Vender geralmente dá menos dinheiro
+      type: "sell"

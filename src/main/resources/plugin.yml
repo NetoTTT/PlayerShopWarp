@@ -1,0 +1,59 @@
+name: PlayerShopWarp
+version: '${project.version}'
+main: PlayerShopWarp.playerShopWarp.PlayerShopWarp
+api-version: '1.16'
+authors: [SeuNome]
+description: Plugin para criar e gerenciar warps de lojas de jogadores
+depend: [Vault]
+softdepend: [Essentials, CMI, GemsEconomy]
+
+commands:
+  shopwarp:
+    description: Comando principal para gerenciar warps de lojas
+    aliases: [pshop, shopw, sw]
+    usage: /shopwarp
+
+permissions:
+  playershopwarp.player.create:
+    description: Permite criar warps de loja
+    default: true
+  playershopwarp.player.delete:
+    description: Permite deletar suas próprias warps de loja
+    default: true
+  playershopwarp.player.list:
+    description: Permite listar suas warps de loja
+    default: true
+  playershopwarp.player.teleport:
+    description: Permite teleportar para warps de loja
+    default: true
+  playershopwarp.player.announce:
+    description: Permite anunciar suas lojas no chat
+    default: true
+  playershopwarp.player.maxwarp.1:
+    description: Permite criar até 1 warp de loja
+    default: true
+  playershopwarp.player.maxwarp.2:
+    description: Permite criar até 2 warps de loja
+    default: false
+  playershopwarp.player.maxwarp.3:
+    description: Permite criar até 3 warps de loja
+    default: false
+  playershopwarp.player.maxwarp.5:
+    description: Permite criar até 5 warps de loja
+    default: false
+  playershopwarp.player.maxwarp.10:
+    description: Permite criar até 10 warps de loja
+    default: false
+  playershopwarp.nocooldown:
+    description: Ignora o cooldown de anúncios
+    default: op
+  playershopwarp.admin:
+    description: Permissões administrativas
+    default: op
+    children:
+      playershopwarp.admin.reload: true
+      playershopwarp.nocooldown: true
+      playershopwarp.player.maxwarp.20: true
+  playershopwarp.admin.reload:
+    description: Permite recarregar a configuração do plugin
+    default: op
