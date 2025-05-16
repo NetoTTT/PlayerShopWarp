@@ -92,4 +92,4 @@ O plugin oferece configurações extensivas em `config.yml`:
 
 ---
 
-PlayerShopWarp é uma solução completa para gerenciamento de lojas em servidores Minecraft, combinando facilidade de uso para jogadores com ampla personalização para administradores.
+PlayerShopWarp é uma solução completa para gerenciamento de lojas em servidores Minecraft, combinando facilidade de uso para jogadores com ampla personalização para administradores!
